@@ -1,6 +1,3 @@
-// Auto Reload Client for Content Scripts, Popup, Sidepanel, etc.
-// @ts-nocheck
-
 import { createReloadClient } from './reload-client.js'
 
 const PLUGIN_NAME = 'Chrome Extension Reload'

@@ -1,6 +1,3 @@
-// Auto Reload Client for Background Service Worker
-// @ts-nocheck
-
 import { createReloadClient } from './reload-client.js'
 
 const PLUGIN_NAME = 'Chrome Extension Reload'
