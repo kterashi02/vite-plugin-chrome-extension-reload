@@ -1,0 +1,13 @@
+{
+  "name": "chrome-extension-reload-monorepo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter example dev",
+    "build": "pnpm --filter example build",
+    "build:plugin": "pnpm --filter vite-plugin-chrome-extension-reload build"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
