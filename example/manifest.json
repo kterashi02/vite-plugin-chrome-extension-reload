@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Sample Extensions",
+  "version": "1.0",
+  "action": {
+    "default_popup": "src/popup/index.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["src/content/index.js"],
+      "matches": ["https://*/*"]
+    }
+  ],
+  "permissions": [
+    "sidePanel"
+  ],
+  "side_panel": {
+    "default_path": "src/sidepanel/index.html"
+  },
+  "background": {
+    "service_worker": "src/background/index.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["src/content/*.js"],
+      "matches": ["https://*/*"]
+    }
+  ]
+}
+

@@ -1,0 +1,18 @@
+{
+  "name": "example",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite build --mode development --watch",
+    "build": "tsc && vite build"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.287",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.0.0",
+    "vite-plugin-chrome-extension-reload": "workspace:*",
+    "vite-plugin-static-copy": "^3.0.0"
+  }
+}
