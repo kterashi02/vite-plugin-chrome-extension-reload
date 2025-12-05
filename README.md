@@ -1,0 +1,1 @@
+packages/vite-plugin-chrome-extension-reload/README.md
