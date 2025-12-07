@@ -31,7 +31,7 @@ export default function chromeExtensionHmr(options: PluginOptions = {}): Plugin 
   const contentScriptActualPaths: Map<string, string> = new Map()
 
   return {
-    name: 'vite-plugin-chrome-extension-hmr',
+    name: 'vite-plugin-chrome-extension-reload',
 
     configResolved(resolvedConfig) {
       config = resolvedConfig
