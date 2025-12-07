@@ -9,6 +9,11 @@ Vite plugin for Chrome Extension auto reload with Manifest V3 support.
 -  **WebSocket-based communication** with keepalive for Service Worker persistence
 - 🎯 **Smart reload strategy** - only reloads what's necessary
 
+## Demo
+
+![Demo](https://raw.githubusercontent.com/kterashi02/vite-plugin-chrome-extension-reload/main/assets/demo.gif)
+
+
 ## Installation
 
 ```bash
