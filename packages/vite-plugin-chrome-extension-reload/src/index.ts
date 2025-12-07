@@ -12,7 +12,7 @@ function resolveOptions(options: PluginOptions = {}): ResolvedOptions {
     port: options.port ?? 8789,
     backgroundInput: options.backgroundInput,
     contentScriptOutputs: options.contentScriptOutputs ?? [],
-    log: options.log ?? true,
+    log: options.log ?? false,
   }
 }
 

@@ -37,7 +37,7 @@ export default defineConfig({
       port: 8789,                                  // WebSocket port (default: 8789)
       backgroundInput: 'src/background/index.ts',  // Input path for background script
       contentScriptOutputs: ['src/content/index.js'], // Output paths for content scripts (as in manifest.json)
-      log: true,                                   // Enable logging (default: true)
+      log: true,                                   // Enable logging (default: false)
     }),
   ],
   build: {
@@ -93,7 +93,7 @@ vite build --mode development --watch
 | `port` | `number` | `8789` | WebSocket server port |
 | `backgroundInput` | `string` | `undefined` | Input path for background script (e.g., `'src/background/index.ts'`) |
 | `contentScriptOutputs` | `string[]` | `[]` | Output paths for content scripts as specified in manifest.json (e.g., `['src/content/index.js']`) |
-| `log` | `boolean` | `true` | Enable console logging |
+| `log` | `boolean` | `false` | Enable console logging |
 
 ### Important Notes
 
