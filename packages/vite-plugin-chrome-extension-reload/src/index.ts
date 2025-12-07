@@ -1,4 +1,5 @@
 import type { Plugin, ResolvedConfig } from 'vite'
+import MagicString from 'magic-string'
 import type { OutputBundle, OutputChunk } from 'rollup'
 import { writeFileSync, mkdirSync } from 'fs'
 import { resolve, dirname, basename } from 'path'
@@ -46,7 +47,16 @@ export default function chromeExtensionHmr(options: PluginOptions = {}): Plugin 
       // Check if this is background script
       if (resolvedOptions.backgroundInput && id.endsWith(resolvedOptions.backgroundInput)) {
         const clientCode = getClientCode('background', resolvedOptions.port)
-        return `${wrapClientCode(clientCode)}\n${code}`
+        const injectedCode = `${wrapClientCode(clientCode)}\n`
+
+        // Use MagicString to preserve sourcemap accuracy
+        const magicString = new MagicString(code)
+        magicString.prepend(injectedCode)
+
+        return {
+          code: magicString.toString(),
+          map: magicString.generateMap({ hires: true }),
+        }
       }
 
       return null
